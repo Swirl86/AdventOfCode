@@ -17,7 +17,7 @@ class Day01 {
         partTwo()
     }
     private fun loadFile() {
-        File("Day01.txt").useLines { lines -> lines.forEach { list.add(it.toInt()) } }
+        File("data-files/Day01.txt").useLines { lines -> lines.forEach { list.add(it.toInt()) } }
     }
 
     private fun partOne() {
