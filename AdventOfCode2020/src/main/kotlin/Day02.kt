@@ -15,7 +15,7 @@ class Day02 {
     private fun partOne() {
         var validPasswords: Int = 0;
 
-        File("Day02.txt").useLines { lines ->
+        File("data-files/Day02.txt").useLines { lines ->
             lines.forEach { line ->
                 val row: List<String> = line.split(" ")
                 val range: List<String> = row[0].split("-")
@@ -31,7 +31,7 @@ class Day02 {
     private fun partTwo() {
         var validPasswords: Int = 0;
 
-        File("Day02.txt").useLines { lines ->
+        File("data-files/Day02.txt").useLines { lines ->
             lines.forEach { line ->
                 val row: List<String> = line.split(" ")
                 val range: List<String> = row[0].split("-")

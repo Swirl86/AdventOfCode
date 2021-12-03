@@ -25,7 +25,7 @@ class Day03 {
     }
 
     private fun loadFile() {
-        File("Day03.txt").forEachLine {
+        File("data-files/Day03.txt").forEachLine {
             rows.add(it)
         }
         rowWidth = rows[0].length

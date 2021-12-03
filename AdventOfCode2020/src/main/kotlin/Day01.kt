@@ -17,7 +17,7 @@ class Day01 {
         var found: Boolean = false;
 
         val list = mutableListOf<Int>()
-        File("Day01.txt").useLines { lines -> lines.forEach { list.add(it.toInt()) } }
+        File("data-files/Day01.txt").useLines { lines -> lines.forEach { list.add(it.toInt()) } }
 
         list.forEach { i ->
             list.forEach { j ->
@@ -35,7 +35,7 @@ class Day01 {
         var found: Boolean = false;
 
         val list = mutableListOf<Int>()
-        File("Day01.txt").useLines { lines -> lines.forEach { list.add(it.toInt()) } }
+        File("data-files/Day01.txt").useLines { lines -> lines.forEach { list.add(it.toInt()) } }
 
         list.forEach { i ->
             list.forEach { j ->

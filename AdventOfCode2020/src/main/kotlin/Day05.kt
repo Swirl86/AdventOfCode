@@ -16,7 +16,7 @@ class Day05 {
     }
 
     private fun loadFile() {
-        File("Day05.txt").forEachLine {
+        File("data-files/Day05.txt").forEachLine {
             rows.add(it)
         }
     }
