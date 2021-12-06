@@ -7,8 +7,6 @@ import java.io.File
 * Part Two -> 34726
  */
 
-private const val SIZE = 5
-
 class Day04 {
 
     private var list = ArrayList<String>()
@@ -42,6 +40,7 @@ class Day04 {
                 }
             }
             .map { Board(it) }.toList()
+        println(boards[0])
     }
 
     private fun partOne() {
