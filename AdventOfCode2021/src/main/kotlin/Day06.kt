@@ -17,9 +17,10 @@ class Day06 {
 
     private fun loadFile() {
         val values = File("data-files/Day06.txt").readText()
-        values.split(",").map{
-            lanternFishList.add(it.toInt())
-        }
+            .split(",")
+            .map {
+                lanternFishList.add(it.toInt())
+            }
     }
 
     private fun partOne() {
@@ -37,7 +38,6 @@ class Day06 {
             // Can only be values between 0-8 (0 = time for new fish, 8 = new fish timer)
             fishGrowth[i] = lanternFishList.count { it == i }.toLong()
         }
-
 
         for (i in 0 until cycles) {
             val fishStartNewCycle = fishGrowth.removeFirst()

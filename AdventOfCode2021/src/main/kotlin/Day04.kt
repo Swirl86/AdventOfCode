@@ -40,7 +40,6 @@ class Day04 {
                 }
             }
             .map { Board(it) }.toList()
-        println(boards[0])
     }
 
     private fun partOne() {

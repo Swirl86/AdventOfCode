@@ -55,6 +55,7 @@ class Day05 {
                 val dx = line.x2 - line.x1
                 val dy = line.y2 - line.y1
 
+                // Distance between two points
                 (0..abs(dx).coerceAtLeast(abs(dy))).forEach { i ->
                     val x = line.x1 + (if (dx > 0) 1 else (if (dx < 0) -1 else 0)) * i
                     val y = line.y1 + (if (dy > 0) 1 else (if (dy < 0) -1 else 0)) * i
