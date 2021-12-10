@@ -16,7 +16,7 @@ class Day06 {
     }
 
     private fun loadFile() {
-        val values = File("data-files/Day06.txt").readText()
+        val values = File("src/main/resources/Day06.txt").readText()
             .split(",")
             .map {
                 lanternFishList.add(it.toInt())

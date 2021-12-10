@@ -16,7 +16,7 @@ class Day04 {
 
     private fun loadFile() {
         val rowBuilder = mutableListOf<String>()
-        File("data-files/Day04.txt").useLines { lines ->
+        File("src/main/resources/Day04.txt").useLines { lines ->
             lines.forEach { line ->
                 if (line.isEmpty()) {
                     rows.add(splitRows(rowBuilder))

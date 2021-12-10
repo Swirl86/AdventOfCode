@@ -19,7 +19,7 @@ class Day05 {
     }
 
     private fun loadFile() {
-        File("data-files/Day05.txt").forEachLine {
+        File("src/main/resources/Day05.txt").forEachLine {
             list.add(it)
         }
     }

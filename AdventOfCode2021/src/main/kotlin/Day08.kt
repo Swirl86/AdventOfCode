@@ -19,7 +19,7 @@ class Day08 {
     }
 
     private fun loadFile() {
-      File("data-files/Day08.txt").readText()
+      File("src/main/resources/Day08.txt").readText()
             .split("\n")
             .map {
                 sevenSegmentDisplay.add(getValues(it))

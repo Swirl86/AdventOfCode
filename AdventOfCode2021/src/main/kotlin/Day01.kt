@@ -17,26 +17,23 @@ class Day01 {
         partTwo()
     }
     private fun loadFile() {
-        File("data-files/Day01.txt").useLines { lines -> lines.forEach { list.add(it.toInt()) } }
+        File("src/main/resources/Day01.txt").useLines { lines -> lines.forEach { list.add(it.toInt()) } }
     }
 
     private fun partOne() {
-        var increaseCounter: Int = 0;
-
-        for (i in 1 until (list.size)) {
-            if (list[i - 1] < list[i]) increaseCounter++
-        }
-
-        println("Part One : $increaseCounter")
+        println("Part One : ${calculateMeasurement(0)}")
     }
 
     private fun partTwo() {
+        println("Part Two : ${calculateMeasurement(2)}")
+    }
+
+    private fun calculateMeasurement(increase:Int): Int {
         var increaseCounter: Int = 0;
 
-        for (i in 1 until (list.size - 2)) {
-            if (list[i - 1] < list[i + 2]) increaseCounter++
+        for (i in 1 until (list.size - increase)) {
+            if (list[i - 1] < list[i + increase]) increaseCounter++
         }
-
-        println("Part Two : $increaseCounter")
+        return increaseCounter
     }
 }

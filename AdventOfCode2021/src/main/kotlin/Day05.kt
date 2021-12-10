@@ -17,7 +17,7 @@ class Day05 {
     }
 
     private fun loadFile() {
-        File("data-files/Day05.txt").useLines { lines ->
+        File("src/main/resources/Day05.txt").useLines { lines ->
             lines.forEach {
                 linePoints.add(getValues(it))
             }

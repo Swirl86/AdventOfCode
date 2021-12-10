@@ -18,7 +18,7 @@ class Day07 {
     }
 
     private fun loadFile() {
-        val values = File("data-files/Day07.txt").readText()
+        val values = File("src/main/resources/Day07.txt").readText()
             .split(",")
             .map {
                 crabPositions.add(it.toInt())
@@ -62,7 +62,5 @@ class Day07 {
         println("Part Two $minimumFuel")
     }
 
-    private fun getDistance(n: Int): Int {
-        return (n * (n + 1)) / 2 // Gauss formula
-    }
+    private fun getDistance(n: Int) = (n * (n + 1)) / 2 // Gauss formula
 }

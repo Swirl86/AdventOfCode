@@ -15,7 +15,7 @@ class Day02 {
     }
 
     private fun loadFile() {
-        File("data-files/Day02.txt").useLines { lines -> lines.forEach { list.add(it) } }
+        File("src/main/resources/Day02.txt").useLines { lines -> lines.forEach { list.add(it) } }
     }
 
     private fun partOne() {
@@ -61,12 +61,8 @@ class Day02 {
             val steps: Int = row[1].toInt()
 
             when (direction) {
-                "up" -> {
-                    aim -= steps
-                }
-                "down" -> {
-                    aim += steps
-                }
+                "up" -> aim -= steps
+                "down" -> aim += steps
                 else -> {
                     horizontal += steps
                     if(aim != 0) depth += (steps * aim)

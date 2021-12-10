@@ -17,7 +17,7 @@ class Day07 {
     }
 
     private fun loadFile() {
-        File("data-files/Day07.txt").forEachLine { luggageList.add(it) }
+        File("src/main/resources/Day07.txt").forEachLine { luggageList.add(it) }
     }
 
     private fun partOne() {
