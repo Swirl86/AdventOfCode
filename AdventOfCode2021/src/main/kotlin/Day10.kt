@@ -1,6 +1,5 @@
 import java.io.File
 
-
 /* https://adventofcode.com/2021/day/10
 * Find the first illegal character in each corrupted line of the navigation subsystem.
 * Find the completion string for each incomplete line, score the completion strings, and sort the scores.

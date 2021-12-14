@@ -47,7 +47,6 @@ class Day09 {
         // Find all basins
         val basinSizeResult = lowPointsList
             .map { basinRecursion(it) }
-            .filter { it > 0 }
         // Find the three largest basins and multiply their sizes together, take the three highest values after sorted
         val largestBasin =
             basinSizeResult.sortedDescending().take(3).reduce(Int::times) // Multiplies this value by the other value
@@ -58,7 +57,7 @@ class Day09 {
         val y = point.y
         val x = point.x
 
-         if (notValidPoint(point, y, x)) return 0
+         if (notValidPoint(y, x)) return 0
 
          val topPoint = Point(y + 1, x)
          val bottomPoint = Point(y - 1, x)
@@ -75,8 +74,8 @@ class Day09 {
                 + basinRecursion(bottomPoint))
     }
 
-    private fun notValidPoint(point: Point, y: Int, x: Int) =
-        point in visited || y < 0 || x < 0 || x >= list[0].size || y >= list.size || list[y][x] == 9
+    private fun notValidPoint(y: Int, x: Int) =
+        Point(y, x) in visited || y < 0 || x < 0 || x >= list[0].size || y >= list.size || list[y][x] == 9
 
     data class Point(val y: Int, val x: Int)
 }
