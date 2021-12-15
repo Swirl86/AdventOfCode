@@ -10,9 +10,9 @@ import java.io.File
 class Day04 {
 
     private var list = ArrayList<String>()
-    private lateinit var boards: List<Day04.Board>
+    private lateinit var boards: List<Board>
     private lateinit var drawNumbers: List<Int>
-    private var winningList = ArrayList<Day04.Board>()
+    private var winningList = ArrayList<Board>()
 
     fun run() {
         loadFile()
@@ -26,7 +26,7 @@ class Day04 {
     }
 
     private fun setDrawNumbersAndBoards() {
-        drawNumbers = list[0].split(",").map { it.toInt() }
+        drawNumbers = list.first().split(",").map { it.toInt() }
 
         boards = list.asSequence().drop(2)
             .filterNot { it.isEmpty() }
@@ -97,7 +97,7 @@ class Day04 {
 
     data class BoardEntry(val number: Int, var marked: Boolean)
 
-    data class Board(val entries: List<List<Day04.BoardEntry>>) {
+    data class Board(val entries: List<List<BoardEntry>>) {
 
         fun markNumberHits(bingoNumber: Int) {
             entries.forEach { rows ->

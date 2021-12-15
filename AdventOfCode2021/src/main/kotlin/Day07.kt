@@ -18,7 +18,7 @@ class Day07 {
     }
 
     private fun loadFile() {
-        val values = File("src/main/resources/Day07.txt").readText()
+        File("src/main/resources/Day07.txt").readText()
             .split(",")
             .map {
                 crabPositions.add(it.toInt())

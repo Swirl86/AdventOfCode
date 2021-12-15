@@ -8,7 +8,7 @@ import kotlin.math.*
  */
 class Day05 {
     private var linePoints = ArrayList<Coordinates>()
-    private val pointList: ArrayList<Day05.Point> = arrayListOf()
+    private val pointList: ArrayList<Point> = arrayListOf()
 
     fun run() {
         loadFile()
@@ -49,7 +49,7 @@ class Day05 {
     }
 
     private fun partTwo() {
-        val diagonalPoints = mutableListOf<Day05.Point>()
+        val diagonalPoints = mutableListOf<Point>()
         linePoints
             .forEach { line ->
                 val dx = line.x2 - line.x1

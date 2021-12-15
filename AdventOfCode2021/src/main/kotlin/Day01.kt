@@ -9,15 +9,11 @@ import java.io.InputStream
 
 class Day01 {
 
-    private val list = mutableListOf<Int>()
+    private val list = Utils.readInputAsInts("Day01").toMutableList()
 
     fun run() {
-        loadFile()
         partOne()
         partTwo()
-    }
-    private fun loadFile() {
-        File("src/main/resources/Day01.txt").useLines { lines -> lines.forEach { list.add(it.toInt()) } }
     }
 
     private fun partOne() {

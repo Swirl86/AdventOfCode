@@ -6,16 +6,11 @@ import java.io.File
 * Part Two -> 6775520
  */
 class Day03 {
-    private val list = mutableListOf<String>()
+    private val list = Utils.readInput("Day03").toMutableList()
 
     fun run() {
-        loadFile()
         partOne()
         partTwo()
-    }
-
-    private fun loadFile() {
-        File("src/main/resources/Day03.txt").useLines { lines -> lines.forEach { list.add(it) } }
     }
 
     private fun partOne() {
