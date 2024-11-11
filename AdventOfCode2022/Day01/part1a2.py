@@ -3,7 +3,11 @@ https://adventofcode.com/2022/day/1
 Advent of Code 2022 Day 1: Calorie Counting
 """
 
-with open("input.txt") as f:
+import os
+
+
+file_path = os.path.join(os.path.dirname(__file__), "input.txt")
+with open(file_path) as f:
     all_elf_calories = []
     current_elf = 0
 
@@ -21,7 +25,6 @@ with open("input.txt") as f:
     How many total Calories is that Elf carrying?
     """
     print("Part1: ", max(all_elf_calories))
-    
 
     """
     Find the top three Elves carrying the most Calories.
